@@ -1,0 +1,24 @@
+***
+***
+定义返回码及目前已知的暗链隐藏方式
+后续需要增加属性及修改对照此文件
+对文件的引用在./hidden/Analyse
+***
+***
+
+{	
+
+	对于自身节点(6个)
+
+	1:position		检测是否显示在屏幕内，检测position,display,visibility,父节点text-indent放在第一位减少检测时间，实际需要定位的话可以将第一条放到最后
+	2:font-size 	检测文字大小，小于2即认为不可见
+	3:vaisibility	检测visibility属性
+	4:color			检测是否为白色(当前只判定白色)
+	5:opacity		检测opacity，当小于0.2即认为不可见
+	6:display		检测display属性
+
+	对于父节点(1个)
+	7:display		检测display属性	
+
+
+}
